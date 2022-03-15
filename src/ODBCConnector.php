@@ -32,6 +32,8 @@ class ODBCConnector extends Connector implements ConnectorInterface, OdbcDriver
             $dsn = $this->buildDsnDynamicly($config);
         }
 
+        dd($dsn, $config, $options);
+
         $connection = $this->createConnection($dsn, $config, $options);
 
         return $connection;
