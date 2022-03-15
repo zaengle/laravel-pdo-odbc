@@ -32,11 +32,6 @@ class ODBCConnector extends Connector implements ConnectorInterface, OdbcDriver
             $dsn = $this->buildDsnDynamicly($config);
         }
 
-        dump($dsn, $config, $options);
-
-      dd(scandir('/opt/snowflake_odbc/lib'));
-
-
       $connection = $this->createConnection($dsn, $config, $options);
 
         return $connection;
